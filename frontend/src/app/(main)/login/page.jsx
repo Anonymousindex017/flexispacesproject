@@ -63,7 +63,7 @@ const login = () => {
                 htmlFor="email"
                 className="block text-sm mb-2 dark:text-white"
               >
-                Email address
+                Email google address
               </label>
               <div className="relative">
                 
