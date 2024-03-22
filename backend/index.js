@@ -5,7 +5,7 @@ const cors = require('cors');
 const app =  express();
 
 //fill the require data
-const (RouterFileName) = require(`./routes`);
+const postRouter = require('./routers/postRouter');
 
 
 app.use(cors( {
