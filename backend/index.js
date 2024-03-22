@@ -24,4 +24,11 @@ app.get('/',(req,res) => {
 });
 
 //demo to check it
+app.get('/add',(req,res) => {
+    res.send('add responce from express');
+})
+
+app.listen ( port, () => { 
+    console.log('express server started')
+});
 
