@@ -14,7 +14,8 @@ const Home = () => {
           We build a high - energy workspace
         </h1>
         <p className="mt-3 text-lg text-gray-800 dark:text-gray-400">
-          Introducing a new way for your brand to reach the creative community.
+          At  Flexispaces, we believe that the best way to get things done is in a place where ideas can fly and creativity knows no bounds.
+          Flexibilities are key to our
         </p>
         <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
           <div className="w-full sm:w-auto">
