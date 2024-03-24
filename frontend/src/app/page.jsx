@@ -191,11 +191,7 @@ const Home = () => {
 <div className="card" style={{ width: "18rem" }}>
   <img src="https://cdn.dribbble.com/users/44253/screenshots/19002794/media/5d7df2dfc85600ffde9cf8410e90b601.png?resize=400x300&vertical=center" className="card-img-top" alt="..." />
   <div className="card-body">
-    <h5 className="card-title">Virtual office</h5>
-    <p className="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </p>
+    <h5 className="card-title"> Training Office </h5>
     <a href="#" className="btn btn-primary">
       Go somewhere
     </a>
@@ -205,11 +201,18 @@ const Home = () => {
 <div className="card" style={{ width: "18rem" }}>
   <img src="https://oliocoworking.com/wp-content/uploads/2021/07/Coworking-Office-Icon.png" className="card-img-top" alt="..." />
   <div className="card-body">
-    <h5 className="card-title">Private office </h5>
-    <p className="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </p>
+    <h5 className="card-title">Interview office </h5>
+    <a href="#" className="btn btn-primary">
+      Go somewhere
+    </a>
+  </div>
+</div>
+
+
+<div className="card" style={{ width: "18rem" }}>
+  <img src="..." className="card-img-top" alt="..." />
+  <div className="card-body">
+    <h5 className="card-title"> Meeting Office </h5>
     <a href="#" className="btn btn-primary">
       Go somewhere
     </a>
@@ -221,16 +224,31 @@ const Home = () => {
   <img src="..." className="card-img-top" alt="..." />
   <div className="card-body">
     <h5 className="card-title">Card title</h5>
-    <p className="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </p>
     <a href="#" className="btn btn-primary">
       Go somewhere
     </a>
   </div>
 </div>
 
+<div className="card" style={{ width: "18rem" }}>
+  <img src="..." className="card-img-top" alt="..." />
+  <div className="card-body">
+    <h5 className="card-title">Card title</h5>
+    <a href="#" className="btn btn-primary">
+      Go somewhere
+    </a>
+  </div>
+</div>
+
+<div className="card" style={{ width: "18rem" }}>
+  <img src="..." className="card-img-top" alt="..." />
+  <div className="card-body">
+    <h5 className="card-title">Card title</h5>
+    <a href="#" className="btn btn-primary">
+      Go somewhere
+    </a>
+  </div>
+</div>
 </div>
 
 </>
@@ -240,4 +258,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
