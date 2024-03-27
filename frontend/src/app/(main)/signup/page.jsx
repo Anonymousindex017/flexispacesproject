@@ -1,6 +1,20 @@
+import { useFormik } from 'formik';
 import React from 'react'
 
 const signup = () => {
+
+  const signForm = useFormik (
+    {
+      initialValues : {
+            
+      },
+      onSubmit : (values) = {
+      },
+    }
+  )
+
+
+
   return (
     <div>
       <main className="w-full max-w-md mx-auto p-6">
