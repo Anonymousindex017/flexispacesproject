@@ -12,10 +12,7 @@ const signup = () => {
         password: '',
         cpassword: ''
       },
-      onSubmit: (values) = {
-        
-      },
-      validationSchema: sighupValidationSchema
+      
     }
   )
 
@@ -23,7 +20,7 @@ const signup = () => {
 
   return (
     <div>
-      <main className="w-full max-w-md mx-auto p-6">
+      <main className="w-full max-w-md mx-auto p-3">
         <div className="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
           <div className="p-4 sm:p-7">
             <div className="text-center">
@@ -74,6 +71,83 @@ const signup = () => {
               <div className="py-3 flex items-center text-xs text-gray-400 uppercase before:flex-[1_1_0%] before:border-t before:border-gray-200 before:me-6 after:flex-[1_1_0%] after:border-t after:border-gray-200 after:ms-6 dark:text-gray-500 dark:before:border-gray-600 dark:after:border-gray-600">
                 Or
               </div>
+
+              {/* Form Group */}
+              <div className='row'>
+                <div className='col-6'>
+                    <label
+                      htmlFor="String"
+                      className="block text-sm mb-2 dark:text-white"
+                    >
+                       Fisrt Name
+                    </label>
+                    <div className="relative">
+                      <input
+                        type="Srting"
+                        id="name"
+                        name="name"
+                        onChange={signupForm.handleChange}
+                        value={signupForm.values.name}
+                        className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                        required=""
+                        aria-describedby="email-error"
+                      />
+                      <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                        <svg
+                          className="size-5 text-red-500"
+                          width={16}
+                          height={16}
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                          aria-hidden="true"
+                        >
+                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <p className="hidden text-xs text-red-600 mt-2" id="email-error">
+                      Please Enter Your Name First.
+                    </p>
+                    </div>
+
+                    <div className='col-6' >
+                    <label
+                      htmlFor="String"
+                      className="block text-sm mb-2 dark:text-white"
+                    >
+                       Last  Name
+                    </label>
+                    <div className="relative">
+                      <input
+                        type="Srting"
+                        id="lname"
+                        name="lname"
+                        onChange={signupForm.handleChange}
+                        value={signupForm.values.lname}
+                        className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                        required=""
+                        aria-describedby="email-error" 
+                      />
+                      <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                        <svg
+                          className="size-5 text-red-500"
+                          width={16}
+                          height={16}
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                          aria-hidden="true"
+                        >
+                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <p className="hidden text-xs text-red-600 mt-2" id="email-error">
+                      Please Enter Your Last Name.
+                    </p>
+                    </div>
+                  </div>
+                  {/* End Form Group */}
+
               {/* Form */}
               <form onSubmit={signupForm.handleSubmit} >
                 <div className="grid gap-y-4">
@@ -89,7 +163,6 @@ const signup = () => {
                       <input
                         type="email"
                         id="email"
-
                         name="email"
                         onChange={signupForm.handleChange}
                         value={signupForm.values.email}
@@ -115,6 +188,45 @@ const signup = () => {
                     </p>
                   </div>
                   {/* End Form Group */}
+
+                  <div>
+                    <label
+                      htmlFor="Number"
+                      className="block text-sm mb-2 dark:text-white"
+                    >
+                       Contact Number 
+                    </label>
+                    <div className="relative">
+                      <input
+                        type="Srting"
+                        id="contact"
+                        name="contact"
+                        onChange={signupForm.handleChange}
+                        value={signupForm.values.contact}
+                        className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                        required=""
+                        aria-describedby="email-error"
+                      />
+                      <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                        <svg
+                          className="size-5 text-red-500"
+                          width={16}
+                          height={16}
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                          aria-hidden="true"
+                        >
+                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <p className="hidden text-xs text-red-600 mt-2" id="email-error">
+                      Please Enter Your Contact.
+                    </p>
+                    </div>
+
+
+
                   {/* Form Group */}
                   <div>
                     <label
@@ -155,6 +267,7 @@ const signup = () => {
                     </p>
                   </div>
                   {/* End Form Group */}
+
                   {/* Form Group */}
                   <div>
                     <label
@@ -167,7 +280,7 @@ const signup = () => {
                       <input
                         type="password"
                         id="cpassword"
-                        name="confirm-password"
+                        name="cpassword"
                         onChange={signupForm.handleChange}
                         value={signupForm.values.cpassword}
                         className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
