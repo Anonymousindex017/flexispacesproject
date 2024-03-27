@@ -1,15 +1,20 @@
+'use client';
 import { useFormik } from 'formik';
 import React from 'react'
 
 const signup = () => {
 
-  const signForm = useFormik (
+  const signupForm = useFormik (
     {
       initialValues : {
-            
+
+        email :'',
+        password : '',
+        cpassword: ''
       },
       onSubmit : (values) = {
       },
+      validationSchema:sighupValidationSchema
     }
   )
 
@@ -69,7 +74,7 @@ const signup = () => {
           Or
         </div>
         {/* Form */}
-        <form>
+        <form onSubmit={ signupForm.handleSubmit} >
           <div className="grid gap-y-4">
             {/* Form Group */}
             <div>
@@ -83,8 +88,11 @@ const signup = () => {
                 <input
                   type="email"
                   id="email"
+                  
                   name="email"
-                  className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                  onChange={ signupForm.handleChange }
+                  value={signupForm.values.email}
+                  className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                   required=""
                   aria-describedby="email-error"
                 />
@@ -119,7 +127,9 @@ const signup = () => {
                   type="password"
                   id="password"
                   name="password"
-                  className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                  onChange={ signupForm.handleChange }
+                  value={signupForm.values.password}
+                  className="Form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                   required=""
                   aria-describedby="password-error"
                 />
@@ -155,9 +165,11 @@ const signup = () => {
               <div className="relative">
                 <input
                   type="password"
-                  id="confirm-password"
+                  id="cpassword"
                   name="confirm-password"
-                  className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                  onChange={ signupForm.handleChange }
+                  value={signupForm.values.cpassword}
+                  className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                   required=""
                   aria-describedby="confirm-password-error"
                 />
