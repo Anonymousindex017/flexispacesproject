@@ -8,6 +8,8 @@ const app =  express();
 //fill the require data
 const userRouter = require("./routers/userRouter")
 const userRouter = require("./routers/spaceRouter")
+const userRouter = require("./routers/bookingRouter")
+
 
 app.use(express.json());
 app.use(cors( {
@@ -18,6 +20,8 @@ app.use(cors( {
 //that is port to start express server
 app.use("/user", userRouter);
 app.use("/space",spaceRouter);
+app.use("/booking",bookingRouter);
+
 
 
 //start express server
