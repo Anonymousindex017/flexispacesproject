@@ -6,7 +6,7 @@ const port = 5000
 const app =  express();
 
 //fill the require data
-const userRouter = require("./models/usermodel")
+const userRouter = require("./routers/userRouter")
 
 app.use(express.json());
 app.use(cors( {

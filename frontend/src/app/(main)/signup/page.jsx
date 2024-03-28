@@ -1,37 +1,45 @@
 'use client';
 import { useFormik } from 'formik';
+import { enqueueSnackbar } from 'notistack';
 import React from 'react'
 
 const signup = () => {
 
   const signupForm = useFormik({
     initialValues: {
-        name: '',
-        lname: '',
-        email: '',
-        contact:'',
-        passwrord: '',
-        cpassword: ''
+      firstName: '',
+      lastName: '',
+      email: '',
+      contact: '',
+      password: '',
+      cpassword: ''
     },
     onSubmit: (values) => {
-        console.log(values);
+      console.log(values);
 
-        //sending request to backend
+      //sending request to backend
 
-        fetch('http://localhost:5000/post/add',{
-            method:'POST',
-            body :JSON.stringify( values), //covert js to json
-            headers:{
-                'Content-Type' : 'application/json' }
-        })
+      fetch('http://localhost:5000/user/add', {
+        method: 'POST',
+        body: JSON.stringify(values), //covert js to json
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
         .then((response) => {
-            console.log(response.status);
-        }).catch ((err)=> {
-            Console.log(err);
+          console.log(response.status);
+          if (response.status === 200) {
+            enqueueSnackbar("User Added Successfully", { variant: 'success' })
+          } else {
+            enqueueSnackbar("Somthing went wrong", { variant: 'error' })
+          }
+        }).catch((err) => {
+          console.log(err);
+          enqueueSnackbar("Somthing went wrong", { variant: 'error' })
         });
-        
+
     }
-})
+  })
 
 
 
@@ -89,22 +97,23 @@ const signup = () => {
                 Or
               </div>
 
-              {/* Form Group */}
-              <div className='row'>
-                <div className='col-6'>
+              <form onSubmit={signupForm.handleSubmit} >
+
+                {/* Form Group */}
+                <div className='row'>
+                  <div className='col-6'>
                     <label
                       htmlFor="String"
                       className="block text-sm mb-2 dark:text-white"
                     >
-                       Fisrt Name
+                      Fisrt Name
                     </label>
                     <div className="relative">
                       <input
                         type="Srting"
-                        id="name"
-                        name="name"
+                        id="firstName"
                         onChange={signupForm.handleChange}
-                        value={signupForm.values.name}
+                        value={signupForm.values.firstName}
                         className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                         required=""
                         aria-describedby="email-error"
@@ -125,25 +134,24 @@ const signup = () => {
                     <p className="hidden text-xs text-red-600 mt-2" id="email-error">
                       Please Enter Your Name First.
                     </p>
-                    </div>
+                  </div>
 
-                    <div className='col-6' >
+                  <div className='col-6' >
                     <label
                       htmlFor="String"
                       className="block text-sm mb-2 dark:text-white"
                     >
-                       Last  Name
+                      Last Name
                     </label>
                     <div className="relative">
                       <input
                         type="Srting"
-                        id="lname"
-                        name="lname"
+                        id="lastName"
                         onChange={signupForm.handleChange}
-                        value={signupForm.values.lname}
+                        value={signupForm.values.lastName}
                         className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                         required=""
-                        aria-describedby="email-error" 
+                        aria-describedby="email-error"
                       />
                       <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
                         <svg
@@ -161,12 +169,12 @@ const signup = () => {
                     <p className="hidden text-xs text-red-600 mt-2" id="email-error">
                       Please Enter Your Last Name.
                     </p>
-                    </div>
                   </div>
-                  {/* End Form Group */}
+                </div>
+                {/* End Form Group */}
 
-              {/* Form */}
-              <form onSubmit={signupForm.handleSubmit} >
+                {/* Form */}
+
                 <div className="grid gap-y-4">
                   {/* Form Group */}
                   <div>
@@ -180,7 +188,6 @@ const signup = () => {
                       <input
                         type="email"
                         id="email"
-                        name="email"
                         onChange={signupForm.handleChange}
                         value={signupForm.values.email}
                         className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
@@ -211,13 +218,12 @@ const signup = () => {
                       htmlFor="Number"
                       className="block text-sm mb-2 dark:text-white"
                     >
-                       Contact Number 
+                      Contact Number
                     </label>
                     <div className="relative">
                       <input
                         type="Srting"
                         id="contact"
-                        name="contact"
                         onChange={signupForm.handleChange}
                         value={signupForm.values.contact}
                         className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
@@ -240,7 +246,7 @@ const signup = () => {
                     <p className="hidden text-xs text-red-600 mt-2" id="email-error">
                       Please Enter Your Contact.
                     </p>
-                    </div>
+                  </div>
 
 
 
@@ -256,7 +262,6 @@ const signup = () => {
                       <input
                         type="password"
                         id="password"
-                        name="password"
                         onChange={signupForm.handleChange}
                         value={signupForm.values.password}
                         className="Form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
@@ -297,7 +302,6 @@ const signup = () => {
                       <input
                         type="password"
                         id="cpassword"
-                        name="cpassword"
                         onChange={signupForm.handleChange}
                         value={signupForm.values.cpassword}
                         className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
