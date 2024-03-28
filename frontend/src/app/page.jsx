@@ -185,75 +185,26 @@ const Home = () => {
   {/* End Hero */}
 
 {/* start card section */}
-
-{/* <div className="card flex-row" style={{ width: "18rem" }}> 
-
-<div className="card" style={{ width: "18rem" }}>
-  <img src="" className="card-img-top" alt="..." />
-  <div className="card-body">
-    <h5 className="card-title"> Training Office </h5>
-  </div>
-</div>
-
-<div className="card" style={{ width: "18rem" }}>
-  <img src="https://oliocoworking.com/wp-content/uploads/2021/07/Coworking-Office-Icon.png" className="card-img-top" alt="..." />
-  <div className="card-body">
-    <h5 className="card-title">Interview office </h5>
-  </div>
-</div>
-
-
-<div className="card" style={{ width: "18rem" }}>
-  <img src="https://as1.ftcdn.net/v2/jpg/01/11/60/14/1000_F_111601407_Y6BTSXUtRLY4vvEoA1D49W9oWLh5RDmq.jpg" className="card-img-top" alt="..." />
-  <div className="card-body">
-    <h5 className="card-title"> Meeting Office </h5>
-  </div>
-</div>
-
-
-<div className="card" style={{ width: "18rem" }}>
-  <img src="https://media.istockphoto.com/id/928445544/vector/hotel-icons.jpg?s=612x612&w=0&k=20&c=BwnK3r2SDX2x1TK6y7AJNVYI_4-QD4aO18rQ5eWfirc=" className="card-img-top" alt="..." />
-  <div className="card-body">
-    <h5 className="card-title"> Day Pass </h5>
-  </div>
-</div>
-
-<div className="card" style={{ width: "18rem" }}>
-  <img src="https://cdn5.vectorstock.com/i/1000x1000/70/64/meeting-room-icon-vector-37987064.jpg" className="card-img-top" alt="..." />
-  <div className="card-body">
-    <h5 className="card-title">Conference Office </h5>
-  </div>
-</div>
-
-<div className="card" style={{ width: "18rem" }}>
-  <img src="https://images.venuebookingz.com/15988-1675252349-wm-bhagini-mahadevpura-banquet-hall-3.jpeg" className="card-img-top" alt="..." />
-  <div className="card-body">
-    <h5 className="card-title">Events Hall </h5>
-  </div>
-</div>
-</div> */}
  
-
- <div class="grid grid-cols-4 gap-4">
+ <div class="grid grid-cols-3 gap-4 my-10">
  <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   <a href="#">
-    <img className="rounded-t-lg" src="https://cdn.dribbble.com/users/44253/screenshots/19002794/media/5d7df2dfc85600ffde9cf8410e90b601.png?resize=400x300&vertical=center" alt="" />
+    <img className="rounded-t-lg h-80 w-auto" src="https://cdn.dribbble.com/users/44253/screenshots/19002794/media/5d7df2dfc85600ffde9cf8410e90b601.png?resize=400x300&vertical=center" alt="" />
   </a>
   <div className="p-5">
     <a href="#">
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
+      Training Office 
       </h5>
     </a>
     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-      Here are the biggest enterprise technology acquisitions of 2021 so far, in
-      reverse chronological order.
+     ...
     </p>
     <a
       href="#"
       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
     >
-      Read more
+      Book My Space
       <svg
         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
         aria-hidden="true"
@@ -276,23 +227,22 @@ const Home = () => {
 
 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   <a href="#">
-    <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+    <img className="rounded-t-lg h-80 w-auto" src="https://oliocoworking.com/wp-content/uploads/2021/07/Coworking-Office-Icon.png" alt="" />
   </a>
   <div className="p-5">
     <a href="#">
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
-      </h5>
+      Interview office
+       </h5>
     </a>
     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-      Here are the biggest enterprise technology acquisitions of 2021 so far, in
-      reverse chronological order.
+     ...
     </p>
     <a
       href="#"
       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
     >
-      Read more
+       Book My Space
       <svg
         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
         aria-hidden="true"
@@ -315,23 +265,22 @@ const Home = () => {
 
 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   <a href="#">
-    <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+    <img className="rounded-t-lg h-80 w-auto" src="https://as1.ftcdn.net/v2/jpg/01/11/60/14/1000_F_111601407_Y6BTSXUtRLY4vvEoA1D49W9oWLh5RDmq.jpg" alt="" />
   </a>
   <div className="p-5">
     <a href="#">
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
+      Meeting Office
       </h5>
     </a>
     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-      Here are the biggest enterprise technology acquisitions of 2021 so far, in
-      reverse chronological order.
+      ...
     </p>
     <a
       href="#"
       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
     >
-      Read more
+      Book My Space
       <svg
         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
         aria-hidden="true"
@@ -355,23 +304,22 @@ const Home = () => {
 
 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   <a href="#">
-    <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+    <img className="rounded-t-lg h-80 w-auto" src="https://media.istockphoto.com/id/928445544/vector/hotel-icons.jpg?s=612x612&w=0&k=20&c=BwnK3r2SDX2x1TK6y7AJNVYI_4-QD4aO18rQ5eWfirc=" alt="" />
   </a>
   <div className="p-5">
     <a href="#">
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
+      Day Pass
       </h5>
     </a>
     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-      Here are the biggest enterprise technology acquisitions of 2021 so far, in
-      reverse chronological order.
+      ...
     </p>
     <a
       href="#"
       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
     >
-      Read more
+      Book My Space
       <svg
         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
         aria-hidden="true"
@@ -394,63 +342,22 @@ const Home = () => {
 
 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   <a href="#">
-    <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+    <img className="rounded-t-lg h-80 w-auto" src="https://cdn5.vectorstock.com/i/1000x1000/70/64/meeting-room-icon-vector-37987064.jpg" alt="" />
   </a>
   <div className="p-5">
     <a href="#">
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
+      Conference Office
       </h5>
     </a>
     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-      Here are the biggest enterprise technology acquisitions of 2021 so far, in
-      reverse chronological order.
+      ...
     </p>
     <a
       href="#"
       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
     >
-      Read more
-      <svg
-        className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 14 10"
-      >
-        <path
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M1 5h12m0 0L9 1m4 4L9 9"
-        />
-      </svg>
-    </a>
-  </div>
-</div>
-
-
-
-<div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-  <a href="#">
-    <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-  </a>
-  <div className="p-5">
-    <a href="#">
-      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
-      </h5>
-    </a>
-    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-      Here are the biggest enterprise technology acquisitions of 2021 so far, in
-      reverse chronological order.
-    </p>
-    <a
-      href="#"
-      className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-    >
-      Read more
+      Book My Space
       <svg
         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
         aria-hidden="true"
@@ -474,23 +381,22 @@ const Home = () => {
 
 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   <a href="#">
-    <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+    <img className="rounded-t-lg h-80 w-auto" src="https://images.venuebookingz.com/15988-1675252349-wm-bhagini-mahadevpura-banquet-hall-3.jpeg" alt="" />
   </a>
   <div className="p-5">
     <a href="#">
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
+      Events Hall
       </h5>
     </a>
     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-      Here are the biggest enterprise technology acquisitions of 2021 so far, in
-      reverse chronological order.
+     ...
     </p>
     <a
       href="#"
       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
     >
-      Read more
+      Book My Space
       <svg
         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
         aria-hidden="true"
@@ -510,18 +416,13 @@ const Home = () => {
   </div>
 </div>
 
-
-
-
-  <div>09</div>
 </div>
-
 
   <div
   className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
 >
   <img
-    className="object-cover w-full  h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+    className="object-cover w-full  h-full md:h-auto md:w-48 md:rounded-none md:rounded-m-lg"
     src="https://content3.jdmagicbox.com/comp/trichy/x4/0431px431.x431.200729124518.h8x4/catalogue/flexispace-thillai-nagar-trichy-business-centres-rh5cykv3dg.jpg"
     alt=""
   />
