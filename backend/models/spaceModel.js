@@ -1,11 +1,11 @@
-const {model, Schema} = require ('../connection');
+const { model, Schema } = require('../connection');
 
-const mySchema = new Schema({ 
-    loaction : String,
-    area : String,
-    time : String,
-     price : String,
-     service : String
+const mySchema = new Schema({
+    location: String,
+    area: Number,
+    duration: String,
+    price: String,
+    services: Array
 });
 
-module.exports= model('space', mySchema);
+module.exports = model('space', mySchema);
