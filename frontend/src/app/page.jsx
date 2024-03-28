@@ -227,7 +227,7 @@ const Home = () => {
 
 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   <a href="#">
-    <img className="rounded-t-lg h-80 w-auto" src="https://oliocoworking.com/wp-content/uploads/2021/07/Coworking-Office-Icon.png" alt="" />
+    <img className="rounded-t-lg h-80 w-auto list-style-position: center" src="https://oliocoworking.com/wp-content/uploads/2021/07/Coworking-Office-Icon.png" alt="" />
   </a>
   <div className="p-5">
     <a href="#">

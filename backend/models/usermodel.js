@@ -11,4 +11,4 @@ const mySchema = new Schema({
 
 });
 
-module.exports= model('PostCollection', mySchema);
+module.exports= model('user', mySchema);

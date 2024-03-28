@@ -4,17 +4,34 @@ import React from 'react'
 
 const signup = () => {
 
-  const signupForm = useFormik(
-    {
-      initialValues: {
-
+  const signupForm = useFormik({
+    initialValues: {
+        name: '',
+        lname: '',
         email: '',
-        password: '',
+        contact:'',
+        passwrord: '',
         cpassword: ''
-      },
-      
+    },
+    onSubmit: (values) => {
+        console.log(values);
+
+        //sending request to backend
+
+        fetch('http://localhost:5000/post/add',{
+            method:'POST',
+            body :JSON.stringify( values), //covert js to json
+            headers:{
+                'Content-Type' : 'application/json' }
+        })
+        .then((response) => {
+            console.log(response.status);
+        }).catch ((err)=> {
+            Console.log(err);
+        });
+        
     }
-  )
+})
 
 
 
