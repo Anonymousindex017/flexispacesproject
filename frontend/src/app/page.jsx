@@ -416,6 +416,29 @@ const Home = () => {
   </div>
 </div>
 
+<div 
+  href="#"
+  className="card"
+>
+  <img
+    className=""
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTejbodSCmfzmMmz-IRWyCgFyYSHz0PL62sFqK5uOjhkg&s"
+    alt=""
+  />
+  <div className="">
+    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+      Noteworthy technology acquisitions 2021
+    </h5>
+    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+      Here are the biggest enterprise technology acquisitions of 2021 so far, in
+      reverse chronological order.
+    </p>
+  </div>
+</div>
+
+
+
+
 </div>
 
   <div

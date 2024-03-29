@@ -1,7 +1,46 @@
 'use client';
-import React from 'react'
+import { useFormik } from 'formik';
+import { enqueueSnackbar } from 'notistack';
+import React from 'react';
 
 const addspace = () => {
+
+  const addspaceForm = useFormik({
+    initialValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      contact: '',
+    },
+    onSubmit: (values) => {
+      console.log(values);
+
+      //sending request to backend
+
+      fetch('http://localhost:5000/user/add', {
+        method: 'POST',
+        body: JSON.stringify(values), //covert js to json
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then((response) => {
+          console.log(response.status);
+          if (response.status === 200) {
+            enqueueSnackbar("User Added Successfully", { variant: 'success' })
+          } else {
+            enqueueSnackbar("Somthing went wrong", { variant: 'error' })
+          }
+        }).catch((err) => {
+          console.log(err);
+          enqueueSnackbar("Somthing went wrong", { variant: 'error' })
+        });
+      validationSchema: signupValidationSchema
+    }
+  })
+
+
+
   return (
     <div>
         <>

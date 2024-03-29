@@ -9,6 +9,8 @@ const app =  express();
 const userRouter = require("./routers/userRouter")
 const userRouter = require("./routers/spaceRouter")
 const userRouter = require("./routers/bookingRouter")
+const userRouter = require("./routers/contactusRouter")
+
 
 
 app.use(express.json());
@@ -21,6 +23,8 @@ app.use(cors( {
 app.use("/user", userRouter);
 app.use("/space",spaceRouter);
 app.use("/booking",bookingRouter);
+app.use("/booking",contactusRouter);
+
 
 
 
