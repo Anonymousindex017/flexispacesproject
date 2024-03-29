@@ -2,7 +2,22 @@
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
 import React from 'react'
+import * as Yup from 'yup';
 
+
+const signupValidationSchema = Yup.object().shape({
+  name: Yup.string().required('Enter the characters *Abc '),
+  lname: Yup.string().required("Last Name is required"),
+  email: Yup.string().email('Invalid Email').required('Enter Your Email Address'),
+  contact: Yup.number().min(10, "Phone number must be at least 10 digits").required("Contact Number is Required"),
+  password: Yup.string().min(6, 'minimum 6 character!').max(12, 'maximun 12 character').required('make a strong password')
+    .matches(/[A-Z]/, 'Password mudt contain uppercase letter')
+    .matches(/[a-z]/, 'Password must contain lowercase letter')
+    .matches(/[0-9]/, 'Password must contain number'),
+  cpassword: Yup.string().required('required same password')
+    .oneOf([Yup.ref('password'), null], 'Password must cotain matches')
+
+});
 const signup = () => {
 
   const signupForm = useFormik({
@@ -37,7 +52,7 @@ const signup = () => {
           console.log(err);
           enqueueSnackbar("Somthing went wrong", { variant: 'error' })
         });
-
+      validationSchema: signupValidationSchema
     }
   })
 
@@ -45,7 +60,7 @@ const signup = () => {
 
   return (
     <div>
-      <main className="w-full max-w-md mx-auto p-3">
+      <main className="w-full max-w-md mx-auto p-5">
         <div className="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
           <div className="p-4 sm:p-7">
             <div className="text-center">
@@ -97,86 +112,85 @@ const signup = () => {
                 Or
               </div>
 
+              {/* From start*/}
               <form onSubmit={signupForm.handleSubmit} >
-
-                {/* Form Group */}
-                <div className='row'>
-                  <div className='col-6'>
-                    <label
-                      htmlFor="String"
-                      className="block text-sm mb-2 dark:text-white"
-                    >
-                      Fisrt Name
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="Srting"
-                        id="firstName"
-                        onChange={signupForm.handleChange}
-                        value={signupForm.values.firstName}
-                        className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                        required=""
-                        aria-describedby="email-error"
-                      />
-                      <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
-                        <svg
-                          className="size-5 text-red-500"
-                          width={16}
-                          height={16}
-                          fill="currentColor"
-                          viewBox="0 0 16 16"
-                          aria-hidden="true"
-                        >
-                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <p className="hidden text-xs text-red-600 mt-2" id="email-error">
-                      Please Enter Your Name First.
-                    </p>
-                  </div>
-
-                  <div className='col-6' >
-                    <label
-                      htmlFor="String"
-                      className="block text-sm mb-2 dark:text-white"
-                    >
-                      Last Name
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="Srting"
-                        id="lastName"
-                        onChange={signupForm.handleChange}
-                        value={signupForm.values.lastName}
-                        className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                        required=""
-                        aria-describedby="email-error"
-                      />
-                      <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
-                        <svg
-                          className="size-5 text-red-500"
-                          width={16}
-                          height={16}
-                          fill="currentColor"
-                          viewBox="0 0 16 16"
-                          aria-hidden="true"
-                        >
-                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <p className="hidden text-xs text-red-600 mt-2" id="email-error">
-                      Please Enter Your Last Name.
-                    </p>
-                  </div>
-                </div>
-                {/* End Form Group */}
-
-                {/* Form */}
-
                 <div className="grid gap-y-4">
-                  {/* Form Group */}
+
+                  {/* Fisrt Name*/}
+                  <div className='grid gap-4 grid-cols-2'>
+                    <div className='col-6'>
+                      <label
+                        htmlFor="String"
+                        className="block text-sm mb-2 dark:text-white"
+                      >
+                        Fisrt Name
+                      </label>
+                      <div className="relative">
+                        <input
+                          type="Srting"
+                          id="firstName"
+                          onChange={signupForm.handleChange}
+                          value={signupForm.values.firstName}
+                          className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                          required=""
+                          aria-describedby="email-error"
+                        />
+                        <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                          <svg
+                            className="size-5 text-red-500"
+                            width={16}
+                            height={16}
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                          >
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <p className="hidden text-xs text-red-600 mt-2" id="email-error">
+                        Please Enter Your Name First.
+                      </p>
+                    </div>
+
+                    {/* Last Name*/}
+                    <div className='col-6' >
+                      <label
+                        htmlFor="String"
+                        className="block text-sm mb-2 dark:text-white"
+                      >
+                        Last Name
+                      </label>
+                      <div className="relative">
+                        <input
+                          type="Srting"
+                          id="lastName"
+                          onChange={signupForm.handleChange}
+                          value={signupForm.values.lastName}
+                          className=" form-control py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                          required=""
+                          aria-describedby="email-error"
+                        />
+                        <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                          <svg
+                            className="size-5 text-red-500"
+                            width={16}
+                            height={16}
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                          >
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <p className="hidden text-xs text-red-600 mt-2" id="email-error">
+                        Please Enter Your Last Name.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Email */}
                   <div>
                     <label
                       htmlFor="email"
@@ -211,8 +225,8 @@ const signup = () => {
                       Please include a valid email address so we can get back to you
                     </p>
                   </div>
-                  {/* End Form Group */}
 
+                  {/* contact*/}
                   <div>
                     <label
                       htmlFor="Number"
@@ -250,7 +264,7 @@ const signup = () => {
 
 
 
-                  {/* Form Group */}
+                  {/* Password */}
                   <div>
                     <label
                       htmlFor="password"
@@ -288,9 +302,8 @@ const signup = () => {
                       8+ characters required
                     </p>
                   </div>
-                  {/* End Form Group */}
 
-                  {/* Form Group */}
+                  {/* confirm password */}
                   <div>
                     <label
                       htmlFor="confirm-password"
@@ -328,7 +341,7 @@ const signup = () => {
                       Password does not match the password
                     </p>
                   </div>
-                  {/* End Form Group */}
+
                   {/* Checkbox */}
                   <div className="flex items-center">
                     <div className="flex">

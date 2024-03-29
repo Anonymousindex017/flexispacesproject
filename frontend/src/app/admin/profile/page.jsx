@@ -1,3 +1,4 @@
+'usw client';
 import React from 'react'
 
 const AdminProfile = () => {
@@ -97,12 +98,12 @@ const AdminProfile = () => {
                 id="af-account-full-name"
                 type="text"
                 className="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                placeholder="Maria"
+                placeholder="First Name"
               />
               <input
                 type="text"
                 className="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                placeholder="Boone"
+                placeholder="Last Name"
               />
             </div>
           </div>
@@ -121,7 +122,7 @@ const AdminProfile = () => {
               id="af-account-email"
               type="email"
               className="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-              placeholder="maria@site.com"
+              placeholder="abc@gmail.com"
             />
           </div>
           {/* End Col */}
@@ -294,7 +295,7 @@ const AdminProfile = () => {
             type="button"
             className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
           >
-            Save changes
+            Save Profile
           </button>
         </div>
       </form>
