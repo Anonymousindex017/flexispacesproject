@@ -8,12 +8,11 @@ const addspace = () => {
 
   const addspaceForm = useFormik({
     initialValues: {
-      location: String,
-      category: String,
-      area: Number,
-      duration: String,
-      price: String,
-      services: array
+      location: '',
+      category: '',
+      area: '',
+      duration: '',
+      price: ''
     },
     onSubmit: (values) => {
       console.log(values);

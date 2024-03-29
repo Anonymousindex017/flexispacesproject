@@ -23,7 +23,7 @@ app.use(cors({
 app.use("/user", userRouter);
 app.use("/space", spaceRouter);
 app.use("/booking", bookingRouter);
-app.use("/booking", contactusRouter);
+app.use("/contactus", contactusRouter);
 
 //start express server
 app.listen(port, () => {

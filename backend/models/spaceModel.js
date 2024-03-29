@@ -6,7 +6,7 @@ const mySchema = new Schema({
     area: Number,
     duration: String,
     price: String,
-    services: Array
+    services: String
 });
 
 module.exports = model('space', mySchema);
