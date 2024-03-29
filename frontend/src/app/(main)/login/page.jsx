@@ -1,6 +1,47 @@
+import { useFormik } from 'formik';
+import { enqueueSnackbar } from 'notistack';
 import React from 'react'
+import * as Yup from 'yup';
 
+const loginValidationSchema = Yup.object().shape({
+    email: Yup.string().email('Invalid Email').required('Please  enter your email'),
+    password : Yup.string().required('Please Enter the valid password'),
+});
 const login = () => {
+
+  const loginForm = useFormik({
+    initialValues:{
+      email:'',
+      password:''
+    },
+    onSubmit:(values)=>{
+      console.log(values);
+
+      //sending equest to backed
+      fetch('http://localhost:5000/user/add', {
+        method: 'POST',
+        body: JSON.stringify(values), //covert js to json
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then((response) => {
+          console.log(response.status);
+          if (response.status === 200) {
+            enqueueSnackbar("User Added Successfully", { variant: 'success' })
+          } else {
+            enqueueSnackbar("Somthing went wrong", { variant: 'error' })
+          }
+        }).catch((err) => {
+          console.log(err);
+          enqueueSnackbar("Somthing went wrong", { variant: 'error' })
+        });
+      validationSchema: signupValidationSchema
+    }
+  })
+
+
+
   return (
     <div>
       <main className="w-full max-w-md mx-auto p-6">
