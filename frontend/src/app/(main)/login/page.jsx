@@ -1,3 +1,4 @@
+'use client';
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
 import React from 'react'
