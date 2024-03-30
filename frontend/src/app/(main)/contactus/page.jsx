@@ -4,8 +4,8 @@ import React from 'react'
 import { enqueueSnackbar } from 'notistack';
 
 
-const contactUs = () => {
-  const contactUsForm = Formik({
+const contactus = () => {
+  const contactusForm = Formik({
     initialValues: {
       firstName: '',
       lastName: '',
@@ -46,7 +46,7 @@ const contactUs = () => {
     <div>
     
         {/* Contact Us */}
-        <form onSubmit={contactUsForm.handleSubmit} >
+        <form onSubmit={contactusForm.handleSubmit} >
           <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <div className="max-w-xl mx-auto">
               <div className="text-center">
@@ -78,8 +78,8 @@ const contactUs = () => {
                         <input
                           type="text"
                           id="firstName"
-                          onChange={contactUs.handleChange}
-                          value={contactUs.values.firstName}
+                          onChange={contactus.handleChange}
+                          value={contactus.values.firstName}
                           className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                         />
                       </div>
@@ -93,8 +93,8 @@ const contactUs = () => {
                         <input
                           type="text"
                           id="lastName"
-                          onChange={contactUs.handleChange}
-                          value={contactUs.values.lastName}
+                          onChange={contactus.handleChange}
+                          value={contactus.values.lastName}
                           className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                         />
                       </div>
@@ -112,8 +112,8 @@ const contactUs = () => {
                         <input
                           type="email"
                           id="email"
-                          onChange={contactUs.handleChange}
-                          value={contactUs.values.email}
+                          onChange={contactus.handleChange}
+                          value={contactus.values.email}
                           autoComplete="email"
                           className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                         />
@@ -128,8 +128,8 @@ const contactUs = () => {
                         <input
                           type="text"
                           id="phoneNumber"
-                          onChange={contactUs.handleChange}
-                          value={contactUs.values.phoneNumber}
+                          onChange={contactus.handleChange}
+                          value={contactus.values.phoneNumber}
                           className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                         />
                       </div>
@@ -144,8 +144,8 @@ const contactUs = () => {
                       </label>
                       <textarea
                         id="details"
-                        onChange={contactUs.handleChange}
-                        value={contactUs.values.details}
+                        onChange={contactus.handleChange}
+                        value={contactus.values.details}
                         rows={4}
                         className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                         defaultValue={""}
@@ -325,4 +325,4 @@ const contactUs = () => {
   )
 }
 
-export default contactUs;
+export default contactus;
