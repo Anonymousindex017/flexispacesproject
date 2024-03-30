@@ -427,11 +427,10 @@ const Home = () => {
           />
           <div className="">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
+              card information bharana hai
             </h5>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so far, in
-              reverse chronological order.
+              sub deatils
             </p>
           </div>
         </div>
@@ -451,11 +450,10 @@ const Home = () => {
         />
         <div className="flex flex-col justify-between p-4 leading-normal">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
+            filling data about of company
           </h5>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so far, in
-            reverse chronological order.
+            Here are 
           </p>
         </div>
       </div>
@@ -829,9 +827,9 @@ const Home = () => {
               <a
                 className="flex-none text-xl font-semibold text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                 href="#"
-                aria-label="Brand"
+                aria-label="Flexispaces"
               >
-                Brand
+                Flexispaces
               </a>
             </div>
             {/* End Col */}
@@ -891,9 +889,7 @@ const Home = () => {
                   >
                     Careers
                   </a>{" "}
-                  <span className="inline ms-1 text-xs bg-blue-700 text-white py-1 px-2 rounded-lg">
-                    We're hiring
-                  </span>
+                
                 </p>
                 <p>
                   <a
@@ -908,31 +904,7 @@ const Home = () => {
             {/* End Col */}
             <div className="col-span-2">
               <h4 className="font-semibold text-gray-100">Stay up to date</h4>
-              <form>
-                <div className="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 bg-white rounded-lg p-2 dark:bg-gray-800">
-                  <div className="w-full">
-                    <label htmlFor="hero-input" className="sr-only">
-                      Search
-                    </label>
-                    <input
-                      type="text"
-                      id="hero-input"
-                      name="hero-input"
-                      className="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  <a
-                    className="w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    href="#"
-                  >
-                    Subscribe
-                  </a>
-                </div>
-                <p className="mt-3 text-sm text-gray-400">
-                  New UI kits or big discounts. Never spam.
-                </p>
-              </form>
+             
             </div>
             {/* End Col */}
           </div>
