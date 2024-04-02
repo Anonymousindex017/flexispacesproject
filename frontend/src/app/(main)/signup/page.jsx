@@ -1,5 +1,6 @@
 'use client';
 import { useFormik } from 'formik';
+import { useRouter } from 'next/navigation';
 import { enqueueSnackbar } from 'notistack';
 import React from 'react'
 import * as Yup from 'yup';
@@ -19,6 +20,8 @@ const signupValidationSchema = Yup.object().shape({
 
 });
 const signup = () => {
+
+  const router = useRouter();
 
   const signupForm = useFormik({
     initialValues: {
@@ -45,12 +48,13 @@ const signup = () => {
           console.log(response.status);
           if (response.status === 200) {
             enqueueSnackbar("User Added Successfully", { variant: 'success' })
+            router.push('/login');
           } else {
-            enqueueSnackbar("Somthing went wrong", { variant: 'error' })
+            enqueueSnackbar("Something went wrong", { variant: 'error' })
           }
         }).catch((err) => {
           console.log(err);
-          enqueueSnackbar("Somthing went wrong", { variant: 'error' })
+          enqueueSnackbar("Something went wrong", { variant: 'error' })
         });
       validationSchema: signupValidationSchema
     }

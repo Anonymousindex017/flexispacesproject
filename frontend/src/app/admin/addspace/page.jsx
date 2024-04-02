@@ -19,7 +19,7 @@ const addspace = () => {
 
       //sending request to backend
 
-      fetch('http://localhost:5000/user/add', {
+      fetch('http://localhost:5000/space/add', {
         method: 'POST',
         body: JSON.stringify(values), //covert js to json
         headers: {
