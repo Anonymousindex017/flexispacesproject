@@ -14,10 +14,9 @@ const AdminNavbar = () => {
         <a
           className="flex-none text-xl font-semibold text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
           href="#"
-          aria-label="
-          flexispaces"
+          aria-label="Brand"
         >
-          Flexispaces
+          Brand
         </a>
       </div>
       <div className="w-full flex items-center justify-end ms-auto sm:justify-between sm:gap-x-3 sm:order-3">
@@ -253,7 +252,7 @@ const AdminNavbar = () => {
         <div className="snap-center shrink-0 pe-5 sm:pe-8 sm:last-pe-0">
           <a
             className="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="/admin/dashboard"
+            href="/"
           >
             Dashboard
           </a>
@@ -261,7 +260,7 @@ const AdminNavbar = () => {
         <div className="snap-center shrink-0 pe-5 sm:pe-8 sm:last:pe-0">
           <a
             className="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="/user"
+            href="/user\profile"
           >
             Users
           </a>
@@ -277,9 +276,25 @@ const AdminNavbar = () => {
         <div className="snap-center shrink-0 pe-5 sm:pe-8 sm:last:pe-0">
           <a
             className="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="/addspace"
+            href="/user\profile"
           >
-            Add Spaces
+            Users
+          </a>
+        </div>
+        <div className="snap-center shrink-0 pe-5 sm:pe-8 sm:last:pe-0">
+          <a
+            className="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+            href="/profile"
+          >
+            profile
+          </a>
+        </div>
+        <div className="snap-center shrink-0 pe-5 sm:pe-8 sm:last:pe-0">
+          <a
+            className="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+            href="#"
+          >
+            Projects
           </a>
         </div>
         <div className="snap-center shrink-0 pe-5 sm:pe-8 sm:last:pe-0">
