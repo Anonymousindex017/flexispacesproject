@@ -4,13 +4,15 @@ import React, { useEffect, useState } from 'react'
 const Browse = () => {
 
   const [spacelist, setSpaceList] = useState([]);
+  const [masterList, setMasterList] = useState([]);
 
   const fetchSpacelist = async () => {
     const res = await fetch("http://localhost:5000/space/getall");
     console.log(res.status);
     const data = await res.json();
     console.log(data);
-    setBookingList(data);
+    setSpaceList(data);
+    setMasterList(data);
   }
   useEffect(() => {
     fetchSpacelist();

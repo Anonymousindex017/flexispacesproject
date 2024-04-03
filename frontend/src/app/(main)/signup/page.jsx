@@ -75,7 +75,7 @@ const signup = () => {
                 Already have an account?
                 <a
                   className="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                  href="../examples/html/signin.html"
+                  href="/login"
                 >
                   Sign in here
                 </a>
