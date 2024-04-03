@@ -70,7 +70,7 @@ const contactus = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                       <div>
                         <label
-                          htmlFor="hs-firstname-contacts-1"
+                          htmlFor="firstName"
                           className="block mb-2 text-sm text-gray-700 font-medium dark:text-white"
                         >
                           First Name
@@ -85,7 +85,7 @@ const contactus = () => {
                       </div>
                       <div>
                         <label
-                          htmlFor="hs-lastname-contacts-1"
+                          htmlFor="lastName"
                           className="block mb-2 text-sm text-gray-700 font-medium dark:text-white"
                         >
                           Last Name
