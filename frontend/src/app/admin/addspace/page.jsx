@@ -8,10 +8,11 @@ const addspace = () => {
 
   const addspaceForm = useFormik({
     initialValues: {
-      location: '',
       category: '',
+      location: '',
+      city:'',
+      state:'',
       area: '',
-      duration: '',
       price: ''
     },
     onSubmit: (values) => {
@@ -55,7 +56,7 @@ const addspace = () => {
                 Add Space
               </h2>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Manage your Space.
+                Manage Space By Admin.
               </p>
             </div>
             <form onSubmit={addspaceForm.handleSubmit}>
@@ -65,11 +66,13 @@ const addspace = () => {
                   htmlFor="contact"
                   className="inline-block text-sm font-medium dark:text-white"
                 >
-                  Catagory
+                  Category
                 </label>
                 <div className="mt-2 space-y-3">
                   <select
-                    id='catagory'
+                    id='category'
+                    onChange={addspaceForm.handleChange}
+                    value={addspaceForm.values.category}
                     className="py-2 px-3 pe-9 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
                     <option selected="">space</option>
                     <option> Classroom</option>
@@ -82,42 +85,88 @@ const addspace = () => {
               {/* Section */}
               <div className="py-6 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200 dark:border-gray-700 dark:first:border-transparent">
                 <label
-                  htmlFor="af-payment-billing-address"
+                  htmlFor="location"
                   className="inline-block text-sm font-medium dark:text-white"
                 >
                   Address
                 </label>
                 <div className="mt-2 space-y-3">
                   <textarea
-                    id="address"
+                    id="location"
+                    rows={3}
                     onChange={addspaceForm.handleChange}
-                    rows={5}
-                    value={addspaceForm.values.address}
+                    value={addspaceForm.values.location}
                     className="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                     placeholder="Address"
                   ></textarea>
+                  <div className='grid grid-cols-2'> 
+                   <div className="mt-2 space-y-3">
+                  <select
+                    id='city'
+                    onChange={addspaceForm.handleChange}
+                    value={addspaceForm.values.city}
+                    className="py-2 px-3 pe-9 block w-50 border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                    <option selected="">City</option>
+                    <option> Lucknow</option>
+                    <option>Kanpur</option>
+                    <option>Agra</option>
+                    <option>bengaluru</option>
+                    <option>Mumbai</option>
+                    <option>Imphal</option>
+                    <option>Dehradun</option>
+                    <option>Chennai</option>
 
+                  </select>
+                </div>
+                <div className="mt-2 space-y-3">
+                  <select
+                    id='state'
+                     onChange={addspaceForm.handleChange}
+                    value={addspaceForm.values.state}
+                    className="py-2 px-3 pe-9 block w-50 border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                    <option selected="">State</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Karnataka</option>
+                    <option>tamilnaadu</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Punjab</option>
+                    <option>Tripura</option>
+                    <option>uttarakhand</option>
+                  </select>
+                </div>
+                </div>
                 </div>
               </div>
               {/* End Section */}
               {/* Section */}
               <div className="py-6 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200 dark:border-gray-700 dark:first:border-transparent">
                 <label
-                  htmlFor="af-payment-payment-method"
+                  htmlFor="price"
                   className="inline-block text-sm font-medium dark:text-white"
                 >
                   Price details
                 </label>
                 <div className="mt-2 space-y-3">
                   <input
+                    id="area"
+                    onChange={addspaceForm.handleChange}
+                    value={addspaceForm.values.area}
+                    type="number"
+                    className="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                    placeholder="By Square Feet"
+                  />
+                   <input
                     id="price"
                     onChange={addspaceForm.handleChange}
                     value={addspaceForm.values.price}
                     type="number"
                     className="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                    placeholder="By Square Feet"
+                    placeholder="price"
                   />
                 </div>
+                
               </div>
               {/* End Section */}
               <div className="mt-5 flex justify-end gap-x-2">

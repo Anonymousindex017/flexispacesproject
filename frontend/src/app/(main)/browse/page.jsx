@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 const Browse = () => {
@@ -43,7 +44,7 @@ const Browse = () => {
             />
           </svg>
         </button>
-        <aside
+        {/* <aside
           id="separator-sidebar"
           className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
           aria-label="Sidebar"
@@ -257,33 +258,33 @@ const Browse = () => {
               </li>
             </ul>
           </div>
-        </aside>
+        </aside> */}
         
 
         {
-          spacelist.map((book) => {
+          spacelist.map((space) => {
             return (
               <div className='flex justify-center my-10'>
                 <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <a href="#">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      {book.location}
+                      {space.location}
                     </h5>
                   </a>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    {book.duration}
+                    {space.duration}
                   </p>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    {book.furniture}
+                    {space.furniture}
                   </p>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    {book.services}
+                    {space.services}
                   </p>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    {book.coupon}
+                    {space.coupon}
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    href={"/space-details/"+space._id}
                     className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
                     Read more
@@ -302,7 +303,7 @@ const Browse = () => {
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
 
               </div>
